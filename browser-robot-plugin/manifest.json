@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Baidu Search Automation",
+  "version": "1.0",
+  "description": "Opens Baidu, performs a search, and returns results.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.baidu.com/*",
+    "http://localhost:8080/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
