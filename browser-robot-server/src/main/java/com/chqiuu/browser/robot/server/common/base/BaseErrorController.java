@@ -1,12 +1,11 @@
 package com.chqiuu.browser.robot.server.common.base;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * 错误页面统一处理
@@ -34,10 +33,5 @@ public class BaseErrorController implements ErrorController {
         }
         // 未获取到错误类型时，渲染error模板
         return "error/404";
-    }
-
-    @Override
-    public String getErrorPath() {
-        return "/error";
     }
 }

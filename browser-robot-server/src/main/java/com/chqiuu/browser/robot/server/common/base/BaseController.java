@@ -1,13 +1,13 @@
 package com.chqiuu.browser.robot.server.common.base;
 
-import cn.hutool.extra.servlet.ServletUtil;
+import cn.hutool.extra.servlet.JakartaServletUtil;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Controller基类
@@ -36,7 +36,7 @@ public class BaseController {
      * @return 客户端IP地址
      */
     public String getClientIp() {
-        return ServletUtil.getClientIP(getRequest(), "");
+        return JakartaServletUtil.getClientIP(getRequest(), "");
     }
 
     /**

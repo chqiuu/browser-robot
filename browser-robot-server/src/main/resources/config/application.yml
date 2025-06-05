@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: browser-robot-server
+  mvc:
+    view:
+      suffix: .jsp
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
